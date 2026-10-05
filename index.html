@@ -1,19 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    
+    <link 
+     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+     rel="stylesheet" 
+    />
+    <link rel="stylesheet"
+     href="icons/fontawesome/css/all.css"
+    /> 
+    <!-- Nuestro css externo va como último link antes del title -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sanrio-cute-love-tienda</title>
+    </head>
 <body>
     <header>
-        <h1>Mi Sitio Web</h1>
+          <div class="div-logo"><a class="logo" href="./index.html">Logo</a></div>
+          
+
+         <nav class="header-nav">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/carrito.html">Carrito</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+            </nav>
     </header>
     <main>
+        <section class="inicio">
+            <h2> "¡Un abrazo lleno de ternura te está esperando! Encuentra a tu personaje favorito"</h2>
+             <p class="parrafo"></p>Peluches suaves y mágicos para llenar tu corazón de alegría</p> 
+        </section>
+
+        <section>
+            <h3 class="titulo-producto text-secondary">Peluches que te robarán el corazón!</h3>
+            <div class="contenedor-tarjetas">
+               <article class="tarjeta text-dark">
+                    <img src="./img/hellooo.jpg" alt="Hello Kitty"
+
+                     />
+                    <h4>Hello Kitty</h4>
+                    <p>Peluche adorable de Hello Kitty</p>
+                    <p>$19.99</p>
+                    <button class="btn bg-secondary color-text">
+                        Comprar
+                    </button>
+                </article> 
+                
+                <article class="tarjeta text-dark">
+                    <img src="./img/kuromi.jpg" alt="Kuromi"
+                     
+                     />
+                    <h4>Kuromi</h4>
+                    <p>Peluche adorable de Kuromi</p>
+                    <p>$18.99</p>
+                    <button class="btn bg-secondary color-text">
+                        Comprar
+                    </button>
+                </article>
+
+                 <article class="tarjeta text-dark">
+                    <img src="./img/cinamo.jpg" alt="Cinamoroll"
+                     
+                     />
+                    <h4>Cinamoroll</h4>
+                    <p>Peluche adorable de Cinamoroll</p>
+                    <p>$16.99</p>
+                    <button class="btn bg-secondary color-text">
+                        Comprar
+                    </button>
+                </article>
+            
+                 <article class="tarjeta text-dark">
+                    <img src="./img/pingui.jpg" alt="Badtz-Maru"
+                     
+                     />
+                    <h4>Badtz-Maru</h4>
+                    <p>Peluche adorable de Badtz-Maru</p>
+                    <p>$15.99</p>
+                    <button class="btn bg-secondary color-text">
+                        Comprar
+                    </button>
+                </article>
+            </div>
+
+        </section>
 
     </main>
     <footer>
-
+     <p>Garantía de ternura en cada paquete. Envíos seguros a todo el país.
+        Sitio-web realizado para Belu.
+        "Sanrio-cute-love-tienda, amor en cada detalle".
+    </p>
+     <nav>
+        <ul class="footer-list">
+            <li>
+                <img src="./img/www.jpg" alt="WhatsApp" /> 
+                <img src="./img/iggg.jpg" alt="Instagram"  /> 
+            </li>
+        </ul>
+     </nav>
     </footer>
 </body>
 </html>
