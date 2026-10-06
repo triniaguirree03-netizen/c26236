@@ -12,9 +12,9 @@ html {
 body {
     font-family: sans-serif;
     font-size: 1.6rem;
-    background: #f48fb1;
+    background: purple;
     color: blanchedalmond;
-
+text-align: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -43,23 +43,25 @@ h2 {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.2;
-    text-align: center;
+    text-align:none;
     margin: 3rem 0;
 }
 
 .btn {
+    display: inline;
     padding: 1.6rem;
+    margin-top: auto;
     border: none;
     font-size: 1.6rem;
     border-radius: 1rem;
     cursor: pointer;
     font-weight: bold;
 }
-
+.btn
 header, 
 footer  {
-    background: #f06292;
-    color: bisque;
+    background: #fc7eb2;
+    color: white;
     width: 100%;
 
     display: flex;
@@ -67,16 +69,42 @@ footer  {
     align-items: center;
 }
 
+header {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: bisque;
+    gap: 30px;
+}
+
+
+
 footer {
     padding: 1rem 4rem;
 }
-
+/* --- ENCABEZADO Y NAV --- */
+header {
+    display: flex;
+    width: 100%
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: bisque;
+}
 .div-logo {
-    margin-left: 2rem;
+    margin-left: 50px;
     font-weight: bold;
+    width: 200
+    height: 200px;
+}
+.logo-img {
+    width: 200px;
+    height: 200px; /*ajusta la altura del logo tamaño grande visible*/
+    object-fit: contain;
 }
 
-.logo, 
+.logo
 .header-nav a {
     text-decoration: none;
     font-size: 3rem;
@@ -86,7 +114,12 @@ footer {
 }
 
 .header-nav {
-    margin-right: 2rem;
+    background-color: bisque;
+    margin-right: auto;
+    width: 100%;
+    margin-left:0;
+    padding: 20px 0;
+    display: flex;
 }
 
 .header-nav ul,
@@ -110,18 +143,18 @@ footer {
 /*                                           COLORES                                                              */   
 /* ---------------------------------------------------------------------------------------------------------------*/
 .bg-primary{
-    background-color: #f48fb1;
+    background-color: violet;
 }
 
 .bg-secondary{
-    background-color: #f06292;
+    background-color: violet;
 }
 
 .text-light{
-    color: white;
+    color: bisque;
 }
 .text-dark{
-    color: white;
+    color: purple;
 }
 .text-secondary{
     color: white;
@@ -149,32 +182,147 @@ footer {
     font-size: 2rem;
     padding: 3rem;
 }
-
+/*1.mantiene las tarjetas del mismo alto*/
 .contenedor-tarjetas {
     display: flex;
     /* Para que se acomoden los hijos abajo si no tienen espacio */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*mantiene la adaptabilidad*/
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    padding: 2rem;
+    /*(mantene las propiedades que tengas, ej: gap,flex-wrap, etc.)*/
+}
+/*2. hace que cada tarjeta sea un contenedor vertical*/
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+}
+/*3. Empuja el precio hacia el fondo*/
+.tarjeta p:last-of-type {
+    margin-top: auto;
 }
 
+/* estilo de tarjetas*/
 .tarjeta {
-    background-color: #FFB6C1;
-    border-radius: 1rem;
+    background-color: aquamarine;
+    border-radius: 16px;
     overflow: hidden;
+    padding: 12px;
+    box-sizing: border-box; rgba(0, 0, 0, 0.08);
     padding-bottom: 2rem;
     text-align: center;
-    width: 30rem;
-    display: row;
+    width: 22%; /*al poner 22, entran 4 tarjetas en una fila, con 1.5rem de gap entre ellas*/
+    /*mantiene demas estilos de borde,fondo, texto, etc*/
+    display:flex;
+    height: 100% 
     flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
     align-items: center;
     gap: 2rem;
 }
 
+.tarjeta-body {
+    flex-grow: 1; /*esto hace que la parte superior ocupe todo el espacio sobrante*/
+}
+/*1. la tarjeta debe ser una columna flex*/
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+}
+/*2.el boton se empuja automáticamente hacia abajo*/
+.tarjeta .btn {
+    margin-top: auto;
+}
+/*3. el parrafo que contiene el precio se empuja hacia abajo*/
+.tarjeta .btn {
+    margin-top: 10px;
+}
+
+    /* si conservo background-color*/
+    .tarjeta h3 {
+        color: #d63384;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+    .tarjeta p {
+     align-items: center;
+     font-size: 1.5rem;
+    margin-bottom: 8px;
+    
+    }
+    .tarjeta .precio {
+        color: #d685a2;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    margin-top: column;
+    }
+
+    .btn-comprar { 
+    background-color: #d63384;
+    color: #ffffff;
+    border: none;
+    margin-top: auto;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .tarjeta img {
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 12px;
     margin-top: 2rem;
-    height: 30rem;
+    height: auto;
     object-fit: cover;
+}
+
+
+    /*1. aumentar espacio entre cada opción del menú*/
+    nav ul {
+      display: flex;
+      list-style: none; 
+      gap: 30px; /*aumenta este valor para items mas separados*/
+      margin: 0;
+      padding: 0;
+      justify-content: flex-end;
+     }
+ 
+
+      /*2. agrandar el texto y los botones del menú*/
+      nav ul a {
+        font-size: 2rem;
+        color:#fc7eb2; 
+        padding: 10px 15px;
+        text-decoration: none;
+        font-weight: bold;
+
+}
+
+/* banner de frase principal */
+.hero-frase {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: violet;
+}
+/*sección de títulos sobre los productos*/
+
+.seccion-productos-header {
+    text-align: start;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.seccion-productos-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+.seccion-productos-header p {
+    font-size: 1rem;
+    color: #fff;
 }
