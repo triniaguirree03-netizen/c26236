@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+     rel="stylesheet" 
+    />
+    <link rel="stylesheet"
+     href="icons/fontawesome/css/all.css"
+    /> 
+    <!-- Nuestro css externo va como último link antes del title -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto -Sanrio-cute-love-tienda-</title>
+</head>
+<body>
+    <header>
+          <div class="div-logo">
+            <a class="logo" href="../index.html"></a>
+        </div>
+
+         <nav class="header-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+            </ul>
+         </nav>
+    </header>
+    <main>
+        <section class="contacto">
+            <h2 class="titulo-contacto text-secondary">¡Contáctanos!</h2>
+            <p>Si tienes alguna pregunta, sugerencia o simplemente quieres decirnos hola, no dudes en enviarnos un mensaje. Estamos aquí para ayudarte y hacer que tu experiencia con nuestros productos sea lo más agradable posible.</p>
+            <form class="form-contacto" action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit" class="btn bg-secondary color-text">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Garantía de ternura en cada paquete. Envíos seguros a todo el país.
+            Sitio-web realizado para Belu.
+            "Sanrio-cute-love-tienda, amor en cada detalle".
+        </p>
+        <nav>
+            <ul class="footer-list">
+                <li>
+                    <img src="../img/www.jpg" alt="WhatsApp" /> 
+                    <img src="../img/iggg.jpg" alt="Instagram"  /> 
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
